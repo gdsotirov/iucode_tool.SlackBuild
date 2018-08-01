@@ -19,14 +19,14 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: iucode_tool.SlackBuild,v 1.1 2018/08/01 17:29:47 gsotirov Exp $
+# $Id: iucode_tool.SlackBuild,v 1.2 2018/08/01 18:17:05 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=iucode_tool
-VERSION=1.6.1
-ARCH=${ARCH:-i486}
+VERSION=2.3.1
+ARCH=${ARCH:-i586}
 BUILD=${BUILD:-1}
 
 TMP=${TMP:-/tmp}
@@ -37,7 +37,7 @@ if [ ! -e $TMP ]; then
   mkdir -p $TMP # location to build the source
 fi
 
-SRC=$TMP/${NAME}-${VERSION}
+SRC=$TMP/${NAME//_/-}-${VERSION}
 if [ -e $SRC -a -d $SRC ]; then
   echo "Source directory '$SRC' already exists! Plaese, move it or remove it."
   exit 1
@@ -71,6 +71,7 @@ make DESTDIR=$PKG install || exit 6
 # Prepare
 bin_perms $PKG
 ( cd $PKG; strip_bin )
+DOCFILES="${DOCFILES} CONTRIBUTING"
 ( cd $SRC; create_docs $PKG ${NAME}-${VERSION} )
 gzip_man $PKG
 
