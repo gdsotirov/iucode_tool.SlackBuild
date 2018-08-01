@@ -1,4 +1,4 @@
-iucode_tool: iucode_tool (manipulate microcode collections for Intel CPUs)
+iucode_tool: iucode_tool (Intel processor microcode tool)
 iucode_tool:
 iucode_tool: iucode_tool is a program to manipulate Intel® X86 and X86-6
 iucode_tool: processor microcode collections, and to use the kernel facilities
