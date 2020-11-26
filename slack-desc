@@ -10,4 +10,4 @@ iucode_tool: them to the kernel.
 iucode_tool: It operates on non-free microcode data downloaded directly from
 iucode_tool: Intel or installed by the intel-microcode package.
 iucode_tool:
-iucode_tool: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
+iucode_tool: Packaged by Georgi D. Sotirov <gdsotirov@gmail.com>
